@@ -4,7 +4,7 @@ import "../index.css";
 
 function Section(props) {
   return (
-    <Wrap>
+    <Wrap bgImage={props.backgroundImg}>
       <ItemText>
         <h1>{props.title}</h1>
         <p>{props.description}</p>
@@ -28,7 +28,8 @@ const Wrap = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("/images/model-s.jpg");
+  /* background-image: url("/images/model-s.jpg"); */
+  background-image: ${(props) => `url("/images/${props.bgImage}")`};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
