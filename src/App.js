@@ -1,7 +1,12 @@
+import Header from "./components/Header";
+import Home from "./components/Home";
+import "./App.css";
+
 function App() {
   return (
     <div className="App">
-      <h1>Tesla-clone</h1>
+      {/* <Header /> */}
+      <Home />
     </div>
   );
 }
