@@ -12,7 +12,11 @@ function Section(props) {
       <Buttons>
         <ButtonGroup>
           <LeftButton>{props.leftBtnText}</LeftButton>
-          <RightButton>{props.rightBtnText}</RightButton>
+          {props.rightBtnText ? (
+            <RightButton>{props.rightBtnText}</RightButton>
+          ) : (
+            ""
+          )}
         </ButtonGroup>
         <DownArrow src="./images/down-arrow.svg" />
       </Buttons>
